@@ -1,32 +1,8 @@
 var autoModsState =  true,
-	autoCookieMonsterState = false,
-	autoAgronomiconState = false,
 	autoGoldenCookieState = true,
 	autoWrathCookieState = true,
 	autoReindeerState = true,
 	autoWrinklerState = 12;
-
-function loadCookieMonster() {
-	if (!autoCookieMonsterState) {
-		if (Game.ready == 1) {
-				Game.LoadMod('https://aktanusa.github.io/CookieMonster/CookieMonster.js');
-				autoCookieMonsterState = true;
-		} else {
-			setTimeout(loadCookieMonster(), 500);
-		}
-	}
-}
-
-function loadAgronomicon() {
-	if (!autoAgronomiconState) {
-		if (Game.ready == 1) {
-				Game.LoadMod('https://bitbucket.org/Acharvak/cookie-clicker-agronomicon/downloads/Agronomicon.js');
-				autoAgronomiconState = true;
-		} else {
-			setTimeout(loadAgronomicon(), 500);
-		}
-	}
-}
 
 var autoGoldenCookie = setInterval(function() {
 	if (autoGoldenCookieState) {
