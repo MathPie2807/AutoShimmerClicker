@@ -98,9 +98,9 @@ function switchAutoWrinklerState() {
 
 function displayStates() {
 	var text = ""
-	text += "Auto Golden Cookie Clicker: " + ((autoGoldenCookieState) ? "on" : "off") "\n";
-	text += "Auto Wrath Cookie Clicker: " + ((autoWrathCookieState) ? "on" : "off") "\n"; 
-	text += "Auto Reindeer Clicker: " + ((autoReindeerState) ? "on" : "off") "\n"; 
+	text += "Auto Golden Cookie Clicker: " + ((autoGoldenCookieState) ? "on" : "off") + "\n";
+	text += "Auto Wrath Cookie Clicker: " + ((autoWrathCookieState) ? "on" : "off") + "\n"; 
+	text += "Auto Reindeer Clicker: " + ((autoReindeerState) ? "on" : "off") + "\n"; 
 	text += "Auto Wrinkler Clicker: " + autoWrinklerkieState + " wrinklers"
 	alert(text);
 }
