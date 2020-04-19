@@ -66,7 +66,7 @@ var autoWrinkler = setInterval(function() {
 		var wrinklerCounter = 0,
 			wrinklerMax = undefined;
 			
-		wrinklers.forEach(function(wrinkler) {
+		Game.wrinklers.forEach(function(wrinkler) {
 			if (wrinkler.sucked > 0) {
 				wrinklerCounter += 1;
 			}
