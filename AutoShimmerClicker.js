@@ -1,8 +1,8 @@
-var autoModsState =  true,
-	autoGoldenCookieState = true,
-	autoWrathCookieState = true,
-	autoReindeerState = true,
-	autoWrinklerState = 12;
+var ShimmerClickerState =  true,
+    autoGoldenCookieState = true,
+    autoWrathCookieState = true,
+    autoReindeerState = true,
+    autoWrinklerState = 12;
 
 var autoGoldenCookie = setInterval(function() {
 	if (autoGoldenCookieState) {
