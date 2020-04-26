@@ -1,14 +1,16 @@
 var ShimmerClickerState =  true,
     autoGoldenCookieState = true,
     autoWrathCookieState = true,
+    autoFortuneState = true,
     autoReindeerState = true,
     autoWrinklerState = 12;
+;
 
 var autoGoldenCookie = setInterval(function() {
 	if (autoGoldenCookieState) {
 		Game.shimmers.forEach(function(shimmer) {
-				if (shimmer.type == "golden" && !shimmer.wrath)
-					shimmer.pop();
+			if (shimmer.type == "golden" && !shimmer.wrath)
+				shimmer.pop();
 		});
 	}
 }, 500);
@@ -16,11 +18,18 @@ var autoGoldenCookie = setInterval(function() {
 var autoWrathCookie = setInterval(function() {
 	if (autoWrathCookieState) {
 		Game.shimmers.forEach(function(shimmer) {
-				if (shimmer.type == "golden" && shimmer.wrath)
-					shimmer.pop();
+			if (shimmer.type == "golden" && shimmer.wrath)
+				shimmer.pop();
 		});
 	}
 }, 500);
+
+var autoFortune = setInterval(function() {
+	if (autoFortuneState) {
+		if (Game.TickerEffect && Game.TickerEffect.type == 'fortune')
+			Game.tickerL.click(); 
+	}
+}, 1000);
 
 var autoReindeer = setInterval(function() {
 	if (autoReindeerState) {
@@ -76,6 +85,7 @@ function displayStates() {
 	var text = ""
 	text += "Auto Golden Cookie Clicker: " + ((autoGoldenCookieState) ? "on" : "off") + "\n";
 	text += "Auto Wrath Cookie Clicker: " + ((autoWrathCookieState) ? "on" : "off") + "\n"; 
+	text += "Auto Fortune Clicker: " + ((autoFortuneState) ? "on" : "off") + "\n"; 
 	text += "Auto Reindeer Clicker: " + ((autoReindeerState) ? "on" : "off") + "\n"; 
 	text += "Auto Wrinkler Clicker: " + String(autoWrinklerState) + " wrinklers"
 	alert(text);
